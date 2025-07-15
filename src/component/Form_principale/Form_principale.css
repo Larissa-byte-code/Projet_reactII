@@ -1,0 +1,11 @@
+.form-principale-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
