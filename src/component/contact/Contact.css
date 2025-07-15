@@ -2,11 +2,7 @@ body {
     background-image: url('/src/img/foret.jpg');
 }
 
-.h1-contact {
-    text-align: center;
-    font-size: 3rem;
-    color: white
-}
+
 
 .contact-form {
     margin: 3rem auto 0;
@@ -35,7 +31,10 @@ body {
 .label-contact {
     font-weight: bold;
     margin-bottom: 0.3rem;
+    color: #000000; /* ou #333 pour un gris foncé lisible */
+    font-size: 0.8rem; /* petite taille mais bien lisible */
 }
+
 
 .select-contact, .message-contact {
     border-radius: 1rem;

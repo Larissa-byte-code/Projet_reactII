@@ -18,9 +18,7 @@ const Contact = () => {
   };
   return (
     <div>
-      <h1 className="h1-contact">Formulaire de Contact</h1>
-
-      <form className="contact-form">
+        <form className="contact-form">
         <div className="form-content">
           <label htmlFor="name" className="label-contact">
             Nom et Prénom :

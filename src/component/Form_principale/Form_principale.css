@@ -1,7 +1,9 @@
 .form-principale-container {
   text-align: center;
   padding: 2rem;
-  background-color: #f0f0f0;
+  background-color: transparent;
+  color: bisque;
+  font-size: 3rem;
 }
 
 select {
