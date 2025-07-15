@@ -21,7 +21,7 @@ const FormPrincipale = () => {
         <option value="services">Services</option>
         <option value="contact">Contact</option>
       </select>
-        //si vrai showContact ALORS  afficher <Contact />
+        {/* si showContact est vrai, alors afficher <Contact /> */}
       {showContact && <Contact />}
     </div>
   );
