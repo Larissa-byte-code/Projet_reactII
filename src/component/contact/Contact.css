@@ -54,3 +54,8 @@ body {
 .button-contact:hover {
     background-color: green;
 }
+.erreur-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}

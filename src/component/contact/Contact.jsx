@@ -8,6 +8,21 @@ const Contact = () => {
   const [phone, setPhone] = useState("");
   const [object, setObject] = useState("");
   const [message, setMessage] = useState("");
+  const [messageErreur, setMessageErreur] = useState("");
+  //comportement 
+
+  const handleTelephoneChange = (e) => {
+    const value = e.target.value;
+    const regex = /^\+261\s\d{2}\s\d{2}\s\d{3}\s\d{2}$/;
+
+    if (value === "" || regex.test(value)) {
+      setPhone(value);
+      setMessageErreur(""); // tout est bon
+    } else {
+      setMessageErreur("Format attendu : +261 32 12 345 67");
+      setPhone(""); // vide le champ
+    }
+  };
 //recuperation valeur
   const values={
     name,
@@ -50,13 +65,22 @@ const Contact = () => {
           </label>
           <input
             className="input-contact"
-            type="text"
+            type="tel"
             id="phone"
             name="phone"
+            //Masque de saiise
+            pattern="\+261\s\d{2}\s\d{2}\s\d{3}\s\d{2}"
+            //title==infobulle
+            title="Format attendu : +261 32 12 345 67"
             placeholder="+261 00 00 000 00"
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={handleTelephoneChange}
+            //onChange={(e) => setPhone(e.target.value)}
           />
+            {messageErreur && (
+            <p className="erreur-message">{messageErreur}</p>
+            )}
 
+            
           <label htmlFor="subject" className="label-contact">
             Sujet :
           </label>
