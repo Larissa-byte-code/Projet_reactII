@@ -12,6 +12,7 @@ const Contact = () => {
   //comportement 
 
   const handleTelephoneChange = (e) => {
+    //récupère la valeur saisie
     const value = e.target.value;
     const regex = /^\+261\s\d{2}\s\d{2}\s\d{3}\s\d{2}$/;
 
@@ -76,6 +77,11 @@ const Contact = () => {
             onChange={handleTelephoneChange}
             //onChange={(e) => setPhone(e.target.value)}
           />
+            {/*
+            if (messageErreur) {
+              return <p>{messageErreur}</p>;
+              }
+          */}
             {messageErreur && (
             <p className="erreur-message">{messageErreur}</p>
             )}
